@@ -1,1453 +1,260 @@
-
-
 <!doctype html>
-<html >
-<head>
-    <meta charset="utf-8">
-<meta http-equiv="window-target" content="_top">
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="google" content="notranslate">
-<title>ICG GAMING - White Label Solution</title>
+<html lang="en" data-bs-theme="auto">
 
-<link rel="shortcut icon" href="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/favicon/theme6.ico">
-<link rel="stylesheet" href="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/css/theme6/uigg.css">
-<link rel="stylesheet" href="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/css/theme6/swiper-bundle.min.css">
-<link rel="stylesheet" href="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/css/theme6/bootstrap-grid.min.css">
-<link rel="stylesheet" href="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/css/theme6/custom.min.css">
-<link rel="stylesheet" href="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/css/public.min.css">
-<link rel="stylesheet" href="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/css/theme6/styles.min.css">
-<script src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/js/theme6/jquery.min.js"></script>
-<script src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/js/functions.js"></script>
-<script src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/js/theme6/swiper-bundle.min.js"></script>
-<script src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/js/theme6/uigg.js?v=240504"></script>
+<head>
+  <script src="../assets/js/color-modes.js"></script>
+function doGet() {
+  return HtmlService.createTemplateFromFile('index').evaluate()
+    .setFaviconUrl('https://img2.pic.in.th/pic/IMG_0529.png')
+    .addMetaTag('viewport', 'width=device-width , initial-scale=1')
+
+}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.122.0">
+  <title>Bottom navbar example · Bootstrap v5.3</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-bottom/">
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+  </style>
+
+
 </head>
 
-<body >
-        <link rel="stylesheet" href="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/css/app_popup_download.css">
-    <style>
-            </style>
-    <div class="wrap-download">
-        <div class="download-content">
-            <div class="download-img">
-                                <img data-src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/app/close.svg" class="download-close lazyload" alt="Close" width="40px" loading="lazy">
-                <img data-src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/app/icon/logo-theme6.png" class="download-logo lazyload"
-                    alt="logo-theme6" width="40px" height="40px" loading="lazy">
-            </div>
-            <div class="download-text">
-                <h6>FAFA939</h6>
-                <span>Fast, efficient and reliable app to use.</span>
-            </div>
-        </div>
-        <div class="download-button-wrapper">
-            <a href="/en/login" class="download-button">Download</a>
-        </div>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+    </symbol>
+  </svg>
+
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+      </li>
+    </ul>
+  </div>
+
+
+  <main class="container">
+    <div class="bg-body-tertiary p-5 rounded mt-3">
+      <h1>Bottom Navbar example</h1>
+      <p class="lead">This example is a quick exercise to illustrate how the bottom navbar works.</p>
+      <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a>
     </div>
-    <script>
-        function setCookie(e, t, n) {
-            var i = "";
-            if (n) {
-                var o = new Date;
-                o.setTime(o.getTime() + 24 * n * 60 * 60 * 1e3), i = "; expires=" + o.toUTCString()
-            }
-            document.cookie = e + "=" + (t || "") + i + "; path=/"
-        }
-
-        function getCookie(e) {
-            for (var t = e + "=", n = document.cookie.split(";"), i = 0; i < n.length; i++) {
-                for (var o = n[i];
-                    " " == o.charAt(0);)
-                    o = o.substring(1, o.length);
-                if (0 == o.indexOf(t))
-                    return o.substring(t.length, o.length)
-            }
-            return null
-        }
-        $(document).ready(function() {
-            $('.download-close').on('click', function() {
-                setCookie('appCookie_theme6', '1', 1);
-                $('.wrap-download').fadeOut('fast');
-                            });
-        });
-        if (getCookie('appCookie_theme6') == '1' && false) {
-            $('.wrap-download').css('display', 'none');
-        }
-            </script>
-
-
-
-<load></load>
-<section class="mobile" data-p="">
-            <section class="head">
-            <div class="head-cont">
-                <div class="main center">
-                    <div class="head-nav-btn center"><i class="ico ico-game-key"></i></div>
-                    <a href="/en" class="logo anime-fade-in-left"><img src="https://picjj.com/images/2024/08/19/Wvit1u.png"></a>
-                    <u></u>
-                    <div class="head-user" >
-                        <a pop="login" class="btn"><i class="ico ico-user"></i></a>
-                    </div>
-                                        <div class="head-login"  hide><a href="/en/center"><em class="avatar"><img class="cover" uigg="avatar"></em></a></div>
-                    <hop right class="lang">
-                        <a class="btn"><i class="ico ico-earth"></i></a>
-                        <hop-cont>
-                                                            <a href="/en/">english</a>
-                                                            <a href="/cn/">简体中文</a>
-                                                            <a href="/vn/">Việt Nam</a>
-                                                            <a href="/kh/">ភាសាខ្មែរ</a>
-                                                            <a href="/id/">Indonesia</a>
-                                                            <a href="/ph/">Filipino</a>
-                                                    </hop-cont>
-                    </hop>
-                                            <hop right class="color">
-                            <a><i class="bg-color"></i></a>
-
-                            <hop-cont>
-                                <a color="sapphire"><i class="bg-sapphire"></i></a>
-                                <a color="orange"><i class="bg-orange"></i></a>
-                                <a color="red"><i class="bg-red"></i></a>
-                                <a color="blue"><i class="bg-blue"></i></a>
-                                <a color="green"><i class="bg-green"></i></a>
-                                <a color="yellow"><i class="bg-yellow"></i></a>
-                                <a color="teal"><i class="bg-teal"></i></a>
-                            </hop-cont>
-                        </hop>
-                                    </div>
-            </div>
-                        <div class="main">
-                <div class="head-other center">
-                    <div class="head-time"></div>
-                    <u></u>
-                    <div class="head-online center"><b>Online</b><span class="center">36226</span></div>
-                </div>
-            </div>
-                    </section>
-            <section class="head-nav anime-fade-in-left">
-        <div class="head-nav-btn center"><i class="ico ico-close"></i></div>
-        <div class="head-nav-cont">
-            <div class="head-nav-luck">
-                                                    <li><a href="/en/login"><i class="ico-reward"></i>
-                            <h6>Rewards</h6>
-                        </a>
-                    </li>
-                                                    <li><a href="/en/promotion"><i class="ico-21"></i>
-                            <h6>Promotions</h6>
-                        </a></li>
-                            </div>
-            <hr>
-            <div class="head-nav-list">
-                <ul>
-                                            <li><a href="/en/sport_lobby"><i class="ico-4"></i><span>Sports</span></a></li>
-                                            <li><a href="/en/casino_lobby"><i class="ico-5"></i><span>Casino</span></a></li>
-                                            <li><a href="/en/slots_lobby"><i class="ico-6"></i><span>Slots</span></a></li>
-                                            <li><a href="/en/cock_lobby"><i class="ico-14"></i><span>Cockfighting</span></a></li>
-                                            <li><a href="/en/poker_lobby"><i class="ico-7"></i><span>Poker</span></a></li>
-                                            <li><a href="/en/lott_lobby"><i class="ico-3"></i><span>Lottery</span></a></li>
-                                                                                    <li><a href="/en/number_lobby"><i class="ico-16"></i><span>Number</span></a></li>
-                                                                            </ul>
-            </div>
-            <hr>
-            <div class="head-nav-list">
-                <ul>
-                                                                <li>
-                            <a href="/en/affiliate"><i class="ico-affiliate"></i><span>Affiliate</span></a>
-                        </li>
-                                                            <li><a href="/en/contact_us"><i class="ico-22"></i><span>Contact Us</span></a></li>
-                    <style>
-                        .ico-unblocker {
-                            background-image: url(https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/ico/unblocker.png);
-                        }
-
-                        .ico-reward {
-                            background-image: url(https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/ico/reward.png);
-                        }
-                    </style>
-                    <li><a href="/en/login"><i class="ico-unblocker"></i><span>Unblocker</span></a></li>
-                                    </ul>
-            </div>
-        </div>
-    </section><section class="light">
-    <section class="swiper swiper-banner">
-        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                    <a href="/en/promotion" class="d-block"><img class="cover" src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/light/1.jpg"></a>
-                </div>
-                            <div class="swiper-slide">
-                    <a href="/en/promotion" class="d-block"><img class="cover" src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/light/2.jpg"></a>
-                </div>
-                    </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </section>
-</section>
-<section class="bulletin bulletin-theme6">
-    <div class="main recenter">
-        <notice href="#">Welcome to the best casino site of today.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</notice>
-       
+  </main>
+  <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Bottom navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+          <li class="nav-item dropup">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropup</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-</section>
-<section class="main">
-            <div class="title"><em></em>
-        <h3>Hot game recommendations</h3><em></em>
-    </div>
-    <section class="swiper-gallery recreation">
-        <div class="swiper gallery-thumb">
-            <div class="swiper-wrapper">
-                                    <div class="swiper-slide" data-name='sport'><i class="ico-4"></i><span>Sports</span></div>
-                                    <div class="swiper-slide" data-name='casino'><i class="ico-5"></i><span>Casino</span></div>
-                                    <div class="swiper-slide" data-name='slot'><i class="ico-6"></i><span>Slots</span></div>
-                                    <div class="swiper-slide" data-name='lottery'><i class="ico-3"></i><span>Thai Lottery</span></div>
-                                    <div class="swiper-slide" data-name='cockfight'><i class="ico-14"></i><span>Cockfighting</span></div>
-                                    <div class="swiper-slide" data-name='poker'><i class="ico-7"></i><span>Poker</span></div>
-                                    <div class="swiper-slide" data-name='lottery'><i class="ico-3"></i><span>Lottery</span></div>
-                                    <div class="swiper-slide" data-name='number'><i class="ico-16"></i><span>Number</span></div>
-                                    <div class="swiper-slide" data-name='spribe'><i class="ico-2"></i><span>Crash</span></div>
-                            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-                <div class="swiper gallery-top">
-            <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                        <div class="game game-sport">
-                                                            <li data-name="AFB1188 Sport" data-gameId="sport" data-item="AFB1188 Sport">
-                                    <a href="/en/login" class="">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/sport/afb2.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/sport/afb2.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="IBC Sport" data-gameId="sport" data-item="IBC Sport">
-                                    <a href="/en/login" class="">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/sport/ibc.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/sport/ibc.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="SBO Sport" data-gameId="sport" data-item="SBO Sport">
-                                    <a href="/en/login" class="">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/sport/sbo.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/sport/sbo.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="TF E-SPORTS" data-gameId="sport" data-item="TF E-SPORTS">
-                                    <a href="/en/login" class="">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/sport/tf_esport.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/sport/tf_esport.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="Horse Racing" data-gameId="sport" data-item="Horse Racing">
-                                    <a href="/en/login" class="">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/sport/horse_racing.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/sport/horse_racing.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="WE Sport" data-gameId="sport" data-item="WE Sport">
-                                    <a href="/en/login" class="">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/sport/we_sport.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/sport/we_sport.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="GGCS Sport" data-gameId="sport" data-item="GGCS Sport">
-                                    <a href="/en/login" class="">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/sport/ggcs.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/sport/ggcs.png"></span>
-                                    </a>
-                                </li>
-                                                    </div>
-                    </div>
-                                    <div class="swiper-slide">
-                        <div class="game game-casino">
-                                                            <li data-name="AFB Casino" data-gameId="casino" data-item="AFB Casino">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/afb_casino.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/afb_casino.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="GD Casino" data-gameId="casino" data-item="GD Casino">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/gd.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/gd.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="PPlay Casino" data-gameId="casino" data-item="PPlay Casino">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/pplay.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/pplay.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="DG99 Casino" data-gameId="casino" data-item="DG99 Casino">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/dg99.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/dg99.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="WM Casino" data-gameId="casino" data-item="WM Casino">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/wm.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/wm.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="Sexy Casino" data-gameId="casino" data-item="Sexy Casino">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/sexy.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/sexy.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="ALLBET Casino" data-gameId="casino" data-item="ALLBET Casino">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/allbet.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/allbet.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="SA Casino" data-gameId="casino" data-item="SA Casino">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/sa.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/sa.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="EVO Casino" data-gameId="casino" data-item="EVO Casino">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/evo.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/evo.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="Yeebet" data-gameId="casino" data-item="Yeebet">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/yeebet.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/yeebet.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="Welive Casino" data-gameId="casino" data-item="Welive Casino">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/casino/welive.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/casino/welive.png"></span>
-                                    </a>
-                                </li>
-                                                    </div>
-                    </div>
-                                    <div class="swiper-slide item-slots">
-                                                    <div class="game game-slot">
-                                                                    <li data-name="Fishing" data-gameId="slot" data-item="Fishing">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/fishing.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/fishing.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="AFB Gaming" data-gameId="slot" data-item="AFB Gaming">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/bg.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/bg.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="PPlay Slots" data-gameId="slot" data-item="PPlay Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/pplay.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/pplay.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Haba Slots" data-gameId="slot" data-item="Haba Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/haba.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/haba.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Joker123 Slots" data-gameId="slot" data-item="Joker123 Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/joker123.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/joker123.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Playstar Slots" data-gameId="slot" data-item="Playstar Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/playstar.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/playstar.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Dragoon Soft" data-gameId="slot" data-item="Dragoon Soft">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/dragoon.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/dragoon.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="PG Slots" data-gameId="slot" data-item="PG Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/pg.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/pg.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="CQ9 Slots" data-gameId="slot" data-item="CQ9 Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/cq9.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/cq9.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="FC Slots" data-gameId="slot" data-item="FC Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/fc.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/fc.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="JILI Slots" data-gameId="slot" data-item="JILI Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/jili.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/jili.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Ka Gaming" data-gameId="slot" data-item="Ka Gaming">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/ka_slot.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/ka_slot.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Spade Gaming" data-gameId="slot" data-item="Spade Gaming">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/spadegaming.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/spadegaming.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Rich88" data-gameId="slot" data-item="Rich88">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/rich88.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/rich88.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Platipus" data-gameId="slot" data-item="Platipus">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/platipus.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/platipus.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Mega888" data-gameId="slot" data-item="Mega888">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/mega888.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/mega888.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Pussy88" data-gameId="slot" data-item="Pussy88">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/pussy88.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/pussy88.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="918Kiss" data-gameId="slot" data-item="918Kiss">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/918kiss.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/918kiss.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="NextSpin" data-gameId="slot" data-item="NextSpin">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/nextspin.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/nextspin.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Live22" data-gameId="slot" data-item="Live22">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/live22.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/live22.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Red Tiger" data-gameId="slot" data-item="Red Tiger">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/rt.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/rt.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="No Limit City" data-gameId="slot" data-item="No Limit City">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/nlc.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/nlc.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="BTG" data-gameId="slot" data-item="BTG">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/btg.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/btg.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Netent" data-gameId="slot" data-item="Netent">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/netent.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/netent.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Play & Go" data-gameId="slot" data-item="Play & Go">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/pngo.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/pngo.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Genesis" data-gameId="slot" data-item="Genesis">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/genesis.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/genesis.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Relax" data-gameId="slot" data-item="Relax">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/relax.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/relax.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="HSW Slots" data-gameId="slot" data-item="HSW Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/hacksaw.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/hacksaw.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="CG Slots" data-gameId="slot" data-item="CG Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/cg.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/cg.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="JDB Slots" data-gameId="slot" data-item="JDB Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/jdb.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/jdb.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="AP Slots" data-gameId="slot" data-item="AP Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/ap.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/ap.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="BigPot Slots" data-gameId="slot" data-item="BigPot Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/bigpot.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/bigpot.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Spribe" data-gameId="slot" data-item="Spribe">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/spribe.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/spribe.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Lucky365" data-gameId="slot" data-item="Lucky365">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/lucky365.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/lucky365.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Naga Slots" data-gameId="slot" data-item="Naga Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/naga.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/naga.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="Popok Slots" data-gameId="slot" data-item="Popok Slots">
-                                        <a href="/en/login">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/popok.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/popok.png"></span>
-                                        </a>
-                                    </li>
-                                                                    <li data-name="pegasus" data-gameId="slot" data-item="pegasus">
-                                        <a href="javascript:gameTransfer(201,'pegasus','/en/pegasus_slots')">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/slot/pegasus.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/slot/pegasus.png"></span>
-                                        </a>
-                                    </li>
-                                                            </div>
-                                            </div>
-                                    <div class="swiper-slide">
-                        <div class="game game-lottery">
-                            <li data-name="Thai Lottery" data-gameId="cockfight" data-item="Thai Lottery">
-                                <a href="/en/login">
-                                    <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/lottery/thai_lottery.png">
-                                    <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/lottery/amb_lottery.png"></span>
-                                </a>
-                            </li>
-                        </div>
-                    </div>
-                                    <div class="swiper-slide">
-                        <div class="game game-cock">
-                                                            <li data-name="SV388" data-gameId="cockfight" data-item="SV388">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/cock/sv388.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/cock/sv388.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="cf361" data-gameId="cockfight" data-item="cf361">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/cock/cf361.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/cock/cf361.png"></span>
-                                    </a>
-                                </li>
-                                                    </div>
-                    </div>
-                                    <div class="swiper-slide">
-                        <div class="game game-poker">
-                                                                                            <li data-name="KaiYuan" data-gameId="poker" data-item="KaiYuan">
-                                        <a href="javascript:gameTransfer(1036,'kaiyuan','/en/kaiyuan')">
-                                            <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/poker/kaiyuan.png">
-                                            <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/poker/kaiyuan.png"></span>
-                                        </a>
-                                    </li>
-                                
-
-                                                    </div>
-                    </div>
-                                    <div class="swiper-slide">
-                        <div class="game game-lottery">
-                                                            <li data-name="Kai Yuan" data-gameId="lottery" data-item="Kai Yuan">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/lottery/lottery.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/lottery/lottery.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="Kai Yuan" data-gameId="lottery" data-item="Kai Yuan">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/lottery/vn2_lottery.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/lottery/vn2_lottery.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="Kai Yuan" data-gameId="lottery" data-item="Kai Yuan">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/lottery/4d_lottery.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/lottery/4d_lottery.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="Kai Yuan" data-gameId="lottery" data-item="Kai Yuan">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/lottery/amb_lottery.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/lottery/amb_lottery.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="lott_4d" data-gameId="lottery" data-item="lott_4d">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/lottery/cambodia_lottery.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/lottery/cambodia_lottery.png"></span>
-                                    </a>
-                                </li>
-                                                    </div>
-                    </div>
-                                    <div class="swiper-slide">
-                        <div class="game game-number">
-                                                            <li data-name="Keno" data-gameId="number" data-item="Keno">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/number/keno.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/number/keno.png"></span>
-                                    </a>
-                                </li>
-                                                            <li data-name="New Keno" data-gameId="number" data-item="New Keno">
-                                    <a href="/en/login">
-                                        <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/number/new_keno.png">
-                                        <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/number/new_keno.png"></span>
-                                    </a>
-                                </li>
-                                                    </div>
-                    </div>
-                                    <div class="swiper-slide">
-                        <div class="game game-crash">
-                            <li data-name="spribe" data-gameId="spribe" data-item="spribe">
-                                <a href="/en/slots?provider=spribe_slots">
-                                    <img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/crash/spribe.png">
-                                    <span><img src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/theme6/provider/crash/spribe.png"></span></a>
-                            </li>
-                        </div>
-                    </div>
-                
-            </div>
-        </div>
-                    <div class="about-us" style=" padding: 0 5px">
-                
-<p style="text-align: center;"><span style="color: #000000;">ICG GAMING | Whitelabel and Software Solutions for online casinos and bookmakers websites. Payment Management, Win/Loss Report , Marketing Tools and many more!</span></p>
-<p> </p>
-            </div>
-                    </section>
-</section>
+  </nav>
+  <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    //swiper
-    var swiper = new Swiper('.swiper-banner', {
-        spaceBetween: 10,
-        centeredSlides: true,
-        loop: true,
-        keyboard: {
-            enabled: true
-        },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    })
-    </script>
-<pop class="pass" pop="login">
-    <pop-main>
-        <pop-title>
-            <h3></h3><a class="close"></a>
-        </pop-title>
-        <pop-cont class="pass-cont">
-            <div class="pass-form">
-                <h3>Login</h3>
-                <form id="login-form" method="post">
-                    <ul class="form">
-                        <li>
-                            <p id="errMsg" class="text-danger"></p>
-                        </li>
-                        <li>
-                            <i class="ico ico-circular-user"></i>
-                            <input type="text" name="user" id="user" placeholder="Username" value="" onkeydown="clearMsg()">
-                        </li>
-                        <li>
-                            <i class="ico ico-password"></i>
-                            <div class="input">
-                                <input type="password" name="password" id="password" placeholder="Password" value="" onkeydown="clearMsg()">
-                                <o class="password"></o>
-                            </div>
-                        </li>
-                        <li>
-                            <o class="checkbox">
-                            </o><span>Remember me a week</span>
-                        </li>
-                        <li><button type="submit" class="btn" id="btnLogin">Login</button></li>
-                        <li><a class="btn btn-empty close" pop="register">Register</a></li>
-                    </ul>
-                </form>
-                                    <div class="pass-other">
-                        <a href="/en/forget">Forgot Password ?</a>
-                    </div>
-                            </div>
-        </pop-cont>
-    </pop-main>
-</pop>
-<script>
-    $(document).ready(function() {
-        var checkBoxEl = $('#form-login .checkbox');
-        var isRemember = !!checkBoxEl.hasClass('active');
-        checkBoxEl.click(function() {
-            isRemember = !isRemember;
-        })
-        $('#login-form').on('submit', function(e) {
-            e.preventDefault();
-            var username = $('#user'),
-                password = $('#password'),
-                btnSubmit = $('#btnLogin');
-            if (username.val() === '') {
-                $('#errMsg').html("Please enter your username");
-                username.focus();
-                return false;
-            } else if (password.val() === '') {
-                $('#errMsg').html("Please enter your password");
-                password.focus();
-                return false;
-            }
-            
-            btnSubmit.prop('disabled', true)
-            loader.show();
-            $.ajax({
-                type: 'POST',
-                url: '/login_submitter',
-                data: {
-                    user: username.val(),
-                    password: password.val(),
-                    auto: isRemember ? 'account' : '',
-                    accept: 'json',
-                    lang_path: "lang/theme6/en",
-                },
-                dataType: 'json',
-                success: function(res) {
-                    if (res.code === '1') {
-                                                window.location = './';
-                    } else {
-                        $('#errMsg').text(res.errMsg)
-                        password.val('');
-                    }
-                    btnSubmit.prop('disabled', false)
-                    loader.hide();
-                }
-            })
-        });
-    })
-</script><pop class="pass" pop="register">
-    <pop-main>
-        <pop-title><h3></h3><a class="close"></a></pop-title>
-        <pop-cont class="pass-cont">
-            <div class="pass-form">
-                <h3>Register</h3>
-                <form id="register-form" method="post">
-                    <ul class="form">
-                        <li>
-                            <p id="errRegMsg" class="text-danger"></p>
-                        </li>
-                        <li>
-                            <i class="ico ico-circular-user"></i>
-                            <input type="text" maxlength="15" name="account" id="account" placeholder="Username" onkeydown="clearMsg('reg')">
-                        </li>
-                        <li>
-                            <i class="ico ico-password"></i>
-                            <div class="input"><input type="password" maxlength="20" name="password" id="regPassword" placeholder="Password" onkeydown="clearMsg('reg')"><o class="password"></o>
-                            </div>
-                        </li>
-                                                    <li>
-                                <i class="ico ico-password"></i>
-                                <div class="input"><input type="password" maxlength="20" name="confirm" id="confirm" placeholder="Confirm Password" onkeydown="clearMsg('reg')"><o class="password"></o></div>
-                            </li>
-                                                                        <li>
-                            <i class="ico ico-call"></i>
-                            <input type="tel" id="tel" name="tel" placeholder="Phone Number" onkeydown="clearMsg('reg')">
-                        </li>
-                                                <li>
-                            <i class="ico ico-currency"></i>
-                            <select id="currency" name="currency" onchange="clearMsg('reg')">
-                                                                    <option value="0">Please select preferable currency</option>
-                                                                    <option value="11">IDR</option>
-                                                                    <option value="4">THB</option>
-                                                                    <option value="8">VND</option>
-                                                                    <option value="3">MYR</option>
-                                                                    <option value="2">SGD</option>
-                                                                    <option value="18">MMK</option>
-                                                                    <option value="25">PHP</option>
-                                                                    <option value="22">LAK</option>
-                                                                    <option value="23">INR</option>
-                                                                    <option value="29">PKR</option>
-                                                                    <option value="31">BDT</option>
-                                                                    <option value="6">HKD</option>
-                                                                    <option value="16">TWD</option>
-                                                                    <option value="32">AUD</option>
-                                                                    <option value="33">BRL</option>
-                                                                    <option value="12">KRW</option>
-                                                                    <option value="36">CAD</option>
-                                                                    <option value="1">USD</option>
-                                                                    <option value="40">KHR</option>
-                                                                    <option value="26">NPR</option>
-                                                            </select>
-                        </li>
-                                                <li>
-                            <o class="checkbox checkbox_ar"></o><span>Read and agree to the <a pop="agreement">user agreement</a></span>
-                        </li>
-                        <li>
-                            <button type="submit" class="btn btn-submit" id="btnRegSubmit">Register</button>
-                        </li>
-                        <li>
-                            <input name="referral" id="referral" class="form-control" type="hidden"  placeholder="Referral"/>
-                            <input type="hidden" name="type" value="ajax">
-                            <a class="btn btn-empty close" pop="login">Log in</a>
-                        </li>
-                    </ul>
-                </form>
-            </div>
-        </pop-cont>
-    </pop-main>
-</pop>
-<script>
-    var tel_pattern = /^[\d]{6,12}$/;
-    var pattern_bankname = /^[a-zA-Z\d_ \u4E00-\u9FA5]{2,50}$/;
-    var pattern_bankname2 = /[^\x00-\xff]{2,50}$/;
-    var pattern_bankno = /^[\d- ]{6,20}$/;
-        var checkBoxRegEl = $('#register-form .checkbox_ar');
-    var isAagreement = !!checkBoxRegEl.hasClass('active');
-    checkBoxRegEl.click(function() {
-        isAagreement = !isAagreement;
-    });
+  let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
 
-    
-    function checkRegister(form) {
-        if (form.account.value.trim().length == 0) {
-            $('#errRegMsg').text("Account Name field cannot empty!");
-            form.account.focus();
-            return false;
-        }
-
-        if (form.account.value.trim().length < 6 || form.account.value.trim().length >= 16 || !/^[a-zA-Z0-9]+$/.test(form.account.value.trim()) || form.account.value.trim().indexOf(' ') >= 0) {
-            $('#errRegMsg').text("Invalid Username");
-            form.account.focus();
-            return false;
-        }
-        if (form.password.value.trim().length == 0) {
-            $('#errRegMsg').text("Password field cannot empty!");
-            form.password.focus();
-            return false;
-        }
-                    if (form.password.value.trim().length <= 7 || form.password.value.trim().length > 20 || form.password.value.trim().indexOf(' ') >= 0) {
-                $('#errRegMsg').text("Password must contain: alphabet and numbers ,length is 8 to 20!");
-                form.password.focus();
-                return false;
-            }
-                            if (form.confirm.value.trim().length == 0) {
-                $('#errRegMsg').text("Please enter confirm password!");
-                form.confirm.focus();
-                return false;
-            }
-
-            if (form.confirm.value.trim() != form.password.value.trim()) {
-                $('#errRegMsg').text("The two password is not the same!");
-                form.confirm.focus();
-                return false;
-            }
-                
-        if (form.tel.value === '') {
-            $('#errRegMsg').html("Enter the contact phone number");
-            form.tel.focus();
-            return false;
-        }
-
-        if (!tel_pattern.test(form.tel.value)) {
-            $('#errRegMsg').html("Phone number should be within 6-12 number only");
-            form.tel.focus();
-            return false;
-        }
-                if (form.currency.value.trim().length == 0 || form.currency.value == 0) {
-            $('#errRegMsg').text("Please select your preferred currency!");
-            form.currency.focus();
-            return false;
-        }
-        
-        if (!isAagreement) {
-            alert("I have read and agree to the terms and conditions.");
-            return false;
-        }
-        return true;
+  // Prevent forms from submitting.
+  function preventFormSubmit() {
+    var forms = document.querySelectorAll('form');
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener('submit', function(event) {
+      event.preventDefault();
+      });
     }
-    $(document).ready(function() {
-        $('#account').on('input', function() {
-            if ($(this).attr('type') === 'text') {
-                // remove symbol and whitespace
-                this.value = this.value.replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, '');
-            }
-        })
-        $('#tel').on('input', function() { // remove symbol and whitespace
-            $(this).val($(this).val().replace(/[^\d+]+$/g, ''));
-        })
-                $('#register-form').on('submit', function(e) {
-            e.preventDefault();
-            if (checkRegister(this)) {
-                var btnSubmit = $('#btnRegSubmit');
-                $.ajax({
-                    type: "POST",
-                    url: "/register_submitter",
-                    data: $(this).serialize(),
-                    beforeSend: function() {
-                        btnSubmit.prop('disabled', true);
-                        loader.show();
-                    },
-                    dataType: 'json',
-                    success: function(msg) {
-                        var message = "Error:Information incorrect!";
-                        if (msg == "1") {
-                            window.location.href = "/en";
-                        } else {
+  }
+  window.addEventListener('load', preventFormSubmit);    
+      
+      
+  function handleFormSubmit(formObject) {
+    google.script.run.processForm(formObject);
+    document.getElementById("myForm").reset();
+  }
+</script><script>
+  let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
 
-                            if (msg == "-1") {
-                                message = "Error:Username containing special symbols!";
-                            } else if (msg == "-2") {
-                                message = "Error:Bank account unavailable!";
-                            } else if (msg == "-4") {
-                                message = "Error:Username already exists!";
-                            } else if (msg == "-5") {
-                                message = "Error:Bank account number has been used";
-                            } else if (msg == "-6" || msg == '-30') {
-                                message = "Phone number already exist";
-                            } else if (msg == "-8") {
-                                message = "Error:Bank invalid";
-                            } else if (msg == "-10") {
-                                message = "Error:This bank account name already exists.";
-                            } else if (msg == "-11") {
-                                message = "Error:This E-mail already exists.";
-                            } else {
-                                if (msg.errMsg) {
-                                    message = msg.errMsg;
-                                }
-                            }
-
-                            $('#errRegMsg').html(message)
-                            btnSubmit.prop('disabled', false);
-                            loader.hide();
-                        }
-                    }
-                })
-            }
-        });
-    })
+  // Prevent forms from submitting.
+  function preventFormSubmit() {
+    var forms = document.querySelectorAll('form');
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener('submit', function(event) {
+      event.preventDefault();
+      });
+    }
+  }
+  window.addEventListener('load', preventFormSubmit);    
+      
+      
+  function handleFormSubmit(formObject) {
+    google.script.run.processForm(formObject);
+    document.getElementById("myForm").reset();
+  }
 </script>
-</section>
-<script>
-    window.default_color = "";
-    window.theme_dir = "theme6";
-    window._lang = "en";
-</script>
-<script src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/js/theme6/date-translate.js"></script>
-<script src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/js/theme6/main.js"></script>
-<script>
-    var slots_window,
-        slots_launch = ["slots_lucky365","slots_smartsoft","slots_naga","slots_popok","slots_9g"],
-        user_info_enc = "";
-    function openSlotFrame(url, provider) {
-        $('.slot-frame-modal').show();
-        if (slots_launch.includes(provider)) {
-            $.ajax({
-                type: 'GET',
-                url: url +"&accept=json",
-                dataType: "json",
-                success: function(res) {
-                    $('#slotFrame').attr("src", res.game_url);
-                }
-            });
-        } else {
-            $('#slotFrame').attr("src", url);
-        }
-    }
-    function open_slots(link, provider = null) {
-        if (slots_launch.includes(provider)) {
-            link = "/?page=slots_launch_submitter&provider=" + provider + "&url=" + link + "&u_info_str="; //encodeURIComponent(link);
-        }
-        //android telegram share link
-        if(user_info_enc != "" && provider != "slots_haba_index"){
-            openSlotFrame(link, provider);
-            return;
-        }
-        try {
-            slots_window.close();
-        } catch (e) {}
-        slots_window = window.open(link, 'slots', 'width=1000,height=700,scrollbars=yes,location=1,resizable=yes');
-    }
-    
-</script>
-<nav class="nav-footer">
-    <li><a href="/en"><i class="ico ico-home"></i><span>Home</span></a></li>
-                <li><a href="/en/promotion"><i class="ico ico-app"></i><span>Promotion</span></a></li>
-                <li>
-                    <a href="/en/contact_us">
-                <i class="ico ico-customer"></i><span>Customer</span>
-            </a>
-            </li>
-            <li><a href="/en/login"><i class="ico ico-user"></i><span>User</span></a></li>
-    </nav>
-    <section class="im">
-                        <li>
-                    <a href="123456">
-                                                    <i class="ico ico-customer"></i>
-                                                <span>Live Chat</span>
-                    </a>
-                </li>
-                            <li>
-                    <a href="/en/login">
-                                                    <i class="ico ico-phone-android"></i>
-                                                <span>App</span>
-                    </a>
-                </li>
-                            <li>
-                    <a href="tel:85514333015">
-                                                    <i class="ico ico-call"></i>
-                                                <span>Tel</span>
-                    </a>
-                </li>
-                            <li>
-                    <a href="https://www.facebook.com/icggaming01/" target="_blank">
-                                                    <i class="ico ico-facebook"></i>
-                                                <span>Facebook</span>
-                    </a>
-                </li>
-                            <li>
-                    <a href="https://line.me/ti/p/dqrSTDUxg_" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-line" viewBox="0 0 16 16">
-                            <path d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0M5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.15.15 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157m.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832l-.013-.015v-.001l-.01-.01-.003-.003-.011-.009h-.001L7.88 4.79l-.003-.002-.005-.003-.008-.005h-.002l-.003-.002-.01-.004-.004-.002-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.2.2 0 0 0 .039.038l.001.001.01.006.004.002.008.004.007.003.005.002.01.003h.003a.2.2 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.16.16 0 0 0-.108.044h-.001l-.001.002-.002.003a.16.16 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.16.16 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z" />
-                        </svg>
-                        <span>Line</span>
-                    </a>
-                </li>
-            </section>
-<style>
-    #transferModal .modal-dialog {
-        max-width: 85%;
-        margin: 0 auto
-    }
-
-    #transferModal .modal-body {
-        border-radius: .5rem;
-        border: 2px solid #ffb821;
-        background-color: #000;
-        color: #fff
-    }
-
-    #transferModal .transfer_title {
-        font-weight: 700;
-        line-height: 1.5
-    }
-
-    #transferModal .label-modal,
-    #transferModal .provider_balance {
-        color: #fff
-    }
-
-    #transferModal .provider_balance span,
-    #transferModal .provider_name {
-        color: inherit
-    }
-
-    #transferModal .close {
-        position: absolute;
-        z-index: 1060;
-        top: -.75rem;
-        right: -.25rem;
-        font-size: 1.5rem;
-        border: 2px solid #ffb821;
-        background-color: #000;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 2rem;
-        height: 2rem;
-        padding: .5rem;
-        opacity: 1;
-        text-shadow: none
-    }
-
-    #transferModal .form-btn-transfer,
-    #transferModal .provider_url {
-        width: 100%;
-        height: 100%;
-        background: #fc7301;
-        padding: .25rem;
-        color: #fff
-    }
-
-    #transferModal .wallet-refresh {
-        width: 15px;
-        cursor: pointer;
-        margin: 0 10px
-    }
-
-    .is-spinning {
-        animation: 2s linear infinite fa-spin
-    }
-
-    @keyframes fa-spin {
-        0% {
-            -webkit-transform: rotate(0);
-            transform: rotate(0)
-        }
-
-        100% {
-            -webkit-transform: rotate(359deg);
-            transform: rotate(359deg)
-        }
-    }
-</style>
-<div class="modal fade modal-transfer" id="transferModal">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="loader"></div>
-            <div class="modal-body">
-                <button type="button" class="close" data-bs-dismiss="modal" data-dismiss="modal" data-role="none">
-                    <span aria-hidden="true" class="text-white">&times;</span>
-                </button>
-                <form id="form-balanceTransfer" method="post" class="form-transfer">
-                    <p class="transfer_title mb-2 text-center">
-                        Do you need to transfer money for (<span class="provider_name text-uppercase"></span>)?
-                    </p>
-                    <div class="mb-3 game_balance_label d-flex">
-                        <div class="col-6 px-0">
-                            <label class="label-modal"><span class="provider_name text-uppercase"></span> :</label>
-                        </div>
-                        <div class="col-6 px-0">
-                            <label class="label-modal provider_balance">
-                                <span class="provider_balance provider_game_balance">0.00</span>
-                                <img class="lazyload wallet-refresh" data-src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/images/icon-refresh-white.png">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mb-3 game_balance_label d-flex">
-                        <div class="col-6 px-0">
-                            <label class="label-modal">Balance :</label>
-                        </div>
-                        <div class="col-6 px-0">
-                            <label class="label-modal provider_balance">
-                                <span class="member_credit"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mb-3 game_balance_label" id="login_id_wrapper" style="display: none">
-                        <div class="col-6 px-0">
-                            <span class="label-modal">Login ID                                :</span>
-                        </div>
-                        <div class="col-6 px-0">
-                            <label class="label-modal provider_balance d-flex">
-                                <span class="game_login_id"></span>
-                                <span id="btnCopyId" class="btn-copy-popup ml-auto" onclick="copyLoginId()">
-                                    Copy </span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mb-2 d-flex">
-                        <div class="col-6 px-0">
-                            <input type="number" id="amount_1" step="any" class="form-control form-amt-transfer" placeholder="Amount">
-                        </div>
-                        <div class="col-6 px-1">
-                            <button type="button" class="btn form-btn-transfer" onclick="buyInOut(1)">Transfer In</button>
-                        </div>
-                    </div>
-                    <div class="mb-3 d-flex">
-                        <div class="col-6 px-0">
-                            <input type="number" id="amount_2" step="any" class="form-control form-amt-transfer" placeholder="Amount">
-                        </div>
-                        <div class="col-6 px-1">
-                            <button type="button" class="btn form-btn-transfer" onclick="buyInOut(2)">Transfer Out</button>
-                        </div>
-                    </div>
-                    <div class="mb-3 mb-3">
-                        <span class="text-msg amt_msg"></span>
-                    </div>
-                    <div class="transfer-btn">
-                        <a href="#" class="btn provider_url" target="_blank">Enter Game</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    var gameArr = {
-        wickets9: "9wicket",
-        exc: "Exchange",
-        meitian: "Mei tian",
-        boshen: "Bo shen",
-        poker365: "Poker 365",
-    }
-    var game_id, from_gameid, to_gameid, provider_name, game_balance, login_id, login_pass;
-    var member_credit;
-    //avviod out of surface
-    function copyLoginId() {
-        var clipboard = new ClipboardJS('.btn-copy-popup', {
-            text: function() {
-                return login_id;
-            }
-        });
-        clipboard.onClick({
-            currentTarget: document.querySelector('.btn-copy-popup')
-        });
-        alert('Copy Success');
-    }
-
-    if (document.getElementById('member_credit')) {
-        member_credit = document.getElementById('member_credit').value.replace(/,/g, "");
-    }
-    var isLogged = false;
-
-    function refreshWallet() {
-        var game_name = [];
-        game_name[0] = provider_name + '_balance';
-        $(".wallet-refresh").addClass('is-spinning')
-        $.ajax({
-            type: "POST",
-            url: "/get_game_balance_submitter",
-            data: "game_name[]=" + game_name,
-            dataType: 'json',
-            success: function(v) {
-                game_balance = v[provider_name + '_balance'];
-                if (v[provider_name + '_coin']) {
-                    game_balance += '(' + v[provider_name + '_coin'] + ')'
-                }
-                if (v[provider_name + '_Id']) {
-                    login_id = v[provider_name + '_Id'];
-                    $('#login_id_wrapper').show();
-                    $('.game_login_id').html(login_id)
-
-                } else {
-                    $('#login_id_wrapper').hide();
-                    $('.game_login_id').html('');
-                }
-
-                if (v[provider_name + '_Pwd']) {
-                    login_pass = v[provider_name + '_Pwd'];
-                }
-                $("#transferModal .provider_game_balance").html(game_balance)
-                $(".wallet-refresh").removeClass('is-spinning')
-            }
-        })
-    }
-
-    function buyInOut(type) {
-        var amount = $('#amount_' + type);
-        if (amount.val() === '' || parseFloat(amount.val()) <= 0) {
-            alert('Field Amount cannot empty!')
-            amount.focus();
-            return false;
-        }
-        from_gameid = 1;
-        to_gameid = game_id;
-        if (type === 2) {
-            from_gameid = game_id;
-            to_gameid = 1;
-        }
-        $.ajax({
-            type: "POST",
-            url: "/center_transfer_submitter",
-            data: {
-                from_gameid: from_gameid,
-                to_gameid: to_gameid,
-                amt: amount.val(),
-                lang_path: 'lang/theme6/en'
-            },
-            dataType: "json",
-            success: function(res) {
-                if (res.code == 1) {
-                    game_balance = res.data[provider_name + '_balance']
-                    member_credit = res.data['balance'];
-                    login_id = res.data[provider_name + '_loginId'];
-
-                    $("#transferModal .provider_game_balance").html(game_balance);
-                    $("#transferModal .member_credit").html(member_credit);
-                    $("#transferModal .game_login_id").html(login_id);
-
-                    if (res.msg) {
-                        alert(res.msg)
-                    }
-                } else {
-                    alert("Transfer fail,please transfer again!");
-                }
-            }
-        })
-    }
-
-    function gameTransfer(id, name, url, id_modal = "") {
-        if (id && name && url && isLogged) {
-            game_id = id;
-            provider_name = name;
-            $('.provider_name').html(gameArr[provider_name] || provider_name)
-            $('.provider_url').attr('href', url)
-            $("#transferModal").modal('show')
-            if(name==='pg'){
-                $('.provider_url').attr('target','_self')
-            }else{
-                $('.provider_url').attr('target','_blank')
-            }
-            refreshWallet();
-        } else {
-            var design_template = true;
-            if(design_template) { // theme6
-                $('[pop="login"]').show()
-            }else{
-                id_modal ? $(id_modal).modal("show") : window.location.href = "/en/login"
-            }
-        }
-    }
-    $(document).ready(function() {
-        $('.wallet-refresh').click(function() {
-            refreshWallet();
-        });
-    })
-</script>
-	 
-            <!-- Popup -->
-            <div id="modal" class="modal" style="height: auto;display: block;top: 50%;left: 50%;transform: translate(-50%, -50%);position: absolute;width: 100%;z-index: 99;">
-                <div class="modal-content" style="width: 90%;margin: 0 auto;display: block;position: relative;">
-                    <div class="modal-body">
-                        <span class="x-close" style="color: #000;position: absolute;right: .4rem;top: 0;font-size: 1.2rem;">&times;</span>
-                        <a id="pop-url" href="#" rel="external"><img style="object-fit: contain;" src="https://i.imgur.com/eMNYPIk.png" alt="" width="100%"></a>
-                    </div>
-                </div>
-            </div>                        
-
-            <script>
-                var modal = document.getElementById('modal');
-                var span = document.getElementsByClassName("x-close")[0];
-                span.onclick = function() {
-                    modal.style.display = "none";
-                };
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                };
-            </script>
-            <style>
-    body {
-        will-change: unset !important;
-        transform-style: unset !important;
-    }
-
-    .float-link {
-        position: fixed !important;
-    }
-</style>
-            <div class="float-link float-link-1" style="bottom: 8%">
-                <button class="btn-close" onclick="$('.float-link-1').hide()"></button>
-                <a href="/en/login" class="d-block">
-                    
-<p><img src="https://i.imgur.com/5f207PI.gif" alt="Gift Point Wheel" width="60" height="60" /></p>
-                </a>
-            </div>
-        <script src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/js/Draggable.min.js"></script>
-<script>
-    $(document).ready(function() {
-        document.querySelectorAll('.float-link').DraggableJS();
-                    $('.float-link img').each(function() {
-                var imgWidth = $(this).attr('width');
-                var imgHeight = $(this).attr('height');
-                if (imgWidth != '') {
-                    $(this).css('width', imgWidth)
-                }
-                if (imgHeight != '') {
-                    $(this).css('height', imgHeight)
-                }
-            });
-            })
-</script>
-<script src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/lib/lazysizes/5.3.2/lazysizes.min.js" async></script>
-<script src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/bootstrap/4.6/js/bootstrap.bundle.min.js"></script>
-<script src="https://855tech-mobile.s3.ap-east-1.amazonaws.com/content/js/jquery.cookie.js"></script>
-<script>
-    let localUrl = window.location.href,
-        pageAllName = localUrl.substring(localUrl.lastIndexOf('/') + 1),
-        pageName = pageAllName.substring(0, pageAllName.indexOf('.'))
-    //if(pageName == ''){pageName = ''}
-    $('nav a[href="' + pageName + '.php"]').parent('li').addClass('active')
-    $(document).ready(function() {
-                    $(document).on('click', 'a[href*=login]', function(e) {
-                e.preventDefault();
-                $('[pop="login"]').show()
-            })
-        
-            })
-</script>
-
-
-
-            <!-- Start of LiveChat (www.livechatinc.com) code -->
-            <script type="text/javascript">
-                var LC_API = LC_API || {};
-                window.__lc = window.__lc || {};
-                window.__lc.license = 123456;
-                (function() {
-                    var lc = document.createElement('script');
-                    lc.type = 'text/javascript';
-                    lc.async = true;
-                    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(lc, s);
-                })();
-
-                // var status = 1;
-                // var livechatid=document.getElementById('livechat-compact-container');
-                // if(livechatid){
-                //     if(livechatid.style.visibility=="visible") {
-                //         livechatid.style.visibility="hidden";
-                //         status = 0;
-                //     }else {
-                //         livechatid.style.visibility="visible";
-                //     }
-                // }
-
-                function maximize(status) {
-                    LC_API.open_chat_window();
-                }
-
-                function toggleChat() {
-                    if (LC_API.chat_window_minimized()) {
-                        LC_API.open_chat_window();
-                    } else {
-                        LC_API.minimize_chat_window();
-                    }
-                }
-                            </script>
-    <input type="hidden" data-web="2000--" data-dir="theme6" />
 </body>
+
 </html>
